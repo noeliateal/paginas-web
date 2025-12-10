@@ -31,4 +31,4 @@ Cada carpeta contiene una página web distinta, con su propio diseño y estilos.
 
 # Funcionamiento
 
-Para ver el funcionamiento de cada página tan solo hay que ir a **archivos_html** y abrir **inicio.html** (sirve para ambos proyectos).
+Para ver el funcionamiento de cada página hay que descargar en formato zip todos los archivos. A continuación hay que ir a **archivos_html** y abrir **inicio.html** (sirve para ambos proyectos, pagina1 y pagina2).
