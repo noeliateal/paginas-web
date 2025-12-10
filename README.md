@@ -1,23 +1,23 @@
-# Páginas Web — Asignatura Tecnologías Web
+# 🌐 Proyecto: Páginas Web (Tecnologías Web)
 
-**Descripción corta:** Dos páginas web creadas como proyecto de la asignatura Tecnologías Web.  
-Incluyen HTML, CSS y JavaScript, diseño responsive y pequeños efectos interactivos.
+Este repositorio contiene **dos páginas web completas** desarrolladas en la asignatura de **Tecnologías Web**.  
+Incluyen HTML, CSS y JavaScript, con diseño responsive y estructura organizada.
 
-## Tecnologías
-- HTML5
-- CSS3 (Flexbox, Grid)
-- JavaScript (ES6)
+---
 
-## Demo
-- Página principal (local): `index.html`
-- Página de ejemplo: `pagina2.html`
-- (Opcional) Demo desplegada: https://TU_USUARIO.github.io/paginas-web  ← (si activas GitHub Pages)
+## 🚀 Tecnologías utilizadas
+- **HTML5**
+- **CSS3** (Flexbox, Grid)
+- **JavaScript (ES6)**
 
-## Capturas
-![Captura 1](./assets/screenshot1.png)
-![Captura 2](./assets/screenshot2.png)
+---
 
-## Cómo ejecutar (local)
-1. Clonar el repo:
-```bash
-git clone https://github.com/TU_USUARIO/paginas-web.git
+## 📁 Estructura del proyecto
+Cada carpeta contiene una página web distinta, con su propio diseño y estilos.
+
+---
+
+## 🖼️ Capturas
+<img width="1893" height="939" alt="paginas-web" src="https://github.com/user-attachments/assets/d12072e2-bb47-4fd7-afde-c860592904d0" />
+
+<img width="1889" height="915" alt="Captura de pantalla 2025-12-10 170600" src="https://github.com/user-attachments/assets/e0623c66-6b42-4118-a880-0aa4e61d08ce" />
