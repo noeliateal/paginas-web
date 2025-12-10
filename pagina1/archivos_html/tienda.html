@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda online</title>
+
+    <link rel="stylesheet" type="text/css" href="../archivos_css/CSS_tienda.css">
+
+    <!--Documneto 1 de JavaScript-->
+    <script type="text/javascript" src="../archivos_js/java_1.js"></script>
+
+    <!--Documneto 2 de JavaScript-->
+    <script type="text/javascript" src="../archivos_js/java_2.js"></script>
+
+
+
+    
+</head>
+<body>
+
+    <header>
+        <!--Menú desplegable-->
+        <div id="menu_desplegable" onmouseover="desplegar()" onmouseout="replegar()" >
+            <ul class="nav"><img class="img_menu" src="../img/menu.png">
+                <li class="item_menu"><a href="SobreNosotros.html">Sobre nosotros</a></li><br>
+                <li class="item_menu"><a href="funcionamiento.html">¿Cómo funcionamos?</a></li><br>
+                <li class="item_menu"><a href="tienda.html">Tienda</a></li><br>
+                <li class="item_menu"><a href="Registro.html";>Registro</a></li><br>
+                <li class="item_menu"><a href="Inicio_de_sesion.html";>Iniciar sesión</a></li>
+            </ul>
+        </div>
+
+        <!-- Logo -->
+        <a class="logo" href="Inicio.html"><img class="logo" src="../img/logo.png">
+            <div class="linea_abajo"></div></a>
+
+        <!-- Imangen de compras -->
+        <img id="menu_carrito" onmouseover="encima()" onclick="compra()" class="img_menu" src="../img/carrito.png">
+    </header>
+    
+    <div id="lugar">
+        <section class="product-container">
+
+            <!--PRODUCTOS-->
+            <div ondragend="soltado(this)" id="zapatos" class="product" onclick="openModal('zapatosair.jpeg', 'Producto 1', 'Descripción del producto 1.', '$XX.XX')">
+                <img src="../img/Productos/zapatosair.jpeg" alt="Producto 1">
+                <div class="product-details">
+                    <h2>Zapatos marrones</h2>
+                    <p>Zapatos deportivos, talla 38, marca Nike.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)"  id="sudadera_blanca" class="product" onclick="openModal('hoodie.jpeg', 'Producto 2', 'Descripción del producto 2.')">
+                <img  src="../img/Productos/hoodie.jpeg" alt="Producto 2">
+                <div class="product-details">
+                    <h2>Sudadera blanca</h2>
+                    <p>Sudadera talla M, con gráficos color verde</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="gafas" class="product" onclick="openModal('lenter.jpeg', 'Producto 3', 'Descripción del producto 3.')">
+                <img src="../img/Productos/lentes.jpeg" alt="Producto 3">
+                <div class="product-details">
+                    <h2>Gafas vintage</h2>
+                    <p>Gafas aesthetic negras con bordes dorados</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+
+            <div ondragend="soltado(this)" id="tocadiscos" class="product" onclick="openModal('tocadiscos.jpeg', 'Producto 4', 'Descripción del producto 4.')">
+                <img src="../img/Productos/tocadiscos.jpeg" alt="Producto 4">
+                <div class="product-details">
+                    <h2>Tocadiscos</h2>
+                    <p>Tocadiscos funcional de madera blanca y decoraciones</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="pendientes" class="product" onclick="openModal('zarcillos.jpeg', 'Producto 5', 'Descripción del producto 5.')">
+                <img src="../img/Productos/zarcillos.jpeg" alt="Producto 5">
+                <div class="product-details">
+                    <h2>pendientes</h2>
+                    <p>pendientes de acero inoxidable</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+            
+            <div ondragend="soltado(this)" id="totebag" class="product" onclick="openModal('totebag.jpeg', 'Producto 6', 'Descripción del producto 6.')">
+                <img src="../img/Productos/totebag.jpeg" alt="Producto 6">
+                <div class="product-details">
+                    <h2>Totebag</h2>
+                    <p>Bolsa con graficos azules, 100% Poliéster</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="lino" class="product" onclick="openModal('lino.jpeg', 'Producto 7', 'Descripción del producto 7.'">
+                <img src="../img/Productos/lino.jpeg" alt="Producto 7">
+                <div class="product-details">
+                    <h2>Conjunto de Lino</h2>
+                    <p>Conjunto de pantalones largos y top de lino y algodon, beige</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+            
+            <div ondragend="soltado(this)" id="florero" class="product" onclick="openModal('florero.jpeg', 'Producto 8', 'Descripción del producto 8.')">
+                <img src="../img/Productos/florero.jpeg" alt="Producto 8">
+                <div class="product-details">
+                    <h2>Florero</h2>
+                    <p>Florero decorativo de cerámica.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="gorros" class="product" onclick="openModal('gorros.jpeg', 'Producto 9', 'Descripción del producto 9.')">
+                <img src="../img/Productos/gorros.jpeg" alt="Producto 9">
+                <div class="product-details">
+                    <h2>Pack de gorros</h2>
+                    <p>Pack de 4 gorros de invierno en colores variados.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="pendientes_de_oro" class="product" onclick="openModal('zarcillos2.jpeg', 'Producto 10', 'Descripción del producto 10.')">
+                <img src="../img/Productos/zarcillos2.jpeg" alt="Producto 10">
+                <div class="product-details">
+                    <h2>Pendientes</h2>
+                    <p>Pendientes de oro en forma de flor.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="bolso" class="product" onclick="openModal('cartera.jpeg', 'Producto 11', 'Descripción del producto 11.')">
+                <img src="../img/Productos/cartera.jpeg" alt="Producto 11">
+                <div class="product-details">
+                    <h2>Bolso</h2>
+                    <p>Bolso grande de cuerina marrón.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="botas" class="product" onclick="openModal('botasaltas.jpeg', 'Producto 12', 'Descripción del producto 12.')">
+                <img src="../img/Productos/botasaltas.jpeg" alt="Producto 12">
+                <div class="product-details">
+                    <h2>Botas</h2>
+                    <p>Botas altas, marrones, talla 37.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="abrigo" class="product" onclick="openModal('abrigo.jpeg', 'Producto 13', 'Descripción del producto 13.')">
+                <img src="../img/Productos/abrigo.jpeg" alt="Producto 13">
+                <div class="product-details">
+                    <h2>Abrigo</h2>
+                    <p>Abrigo largo beige, de lana.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="funda" class="product" onclick="openModal('funda.jpeg', 'Producto 14', 'Descripción del producto 14.')">
+                <img src="../img/Productos/funda.jpeg" alt="Producto 14">
+                <div class="product-details">
+                    <h2>Funda</h2>
+                    <p>Funda para iphone 14 pro, de silicona.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="neceser" class="product" onclick="openModal('necesser.jpeg', 'Producto 15', 'Descripción del producto 15.'">
+                <img src="../img/Productos/necesser.jpeg" alt="Producto 15">
+                <div class="product-details">
+                    <h2>Necesser</h2>
+                    <p>Bolso tipo necesser de felpa.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="zapatos_2" class="product" onclick="openModal('newbalance.jpeg', 'Producto 16', 'Descripción del producto 16.'">
+                <img src="../img/Productos/newbalance.jpeg" alt="Producto 16">
+                <div class="product-details">
+                    <h2>Zapatos</h2>
+                    <p>Zapatos deportivos, marca new balance, talla 40.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="bolso_peque" class="product" onclick="openModal('bolso.jpeg', 'Producto 17', 'Descripción del producto 17.'">
+                <img src="../img/Productos/bolso.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Bolso pequeño</h2>
+                    <p>Bolso pequeño tipo bandolera.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="bikini" class="product" onclick="openModal('trajedebaño.jpeg', 'Producto 18', 'Descripción del producto 18.'">
+                <img src="../img/Productos/trajedebaño.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Bikini</h2>
+                    <p>Bikini de baño acanalado, talla s.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="espejo" class="product" onclick="openModal('espejo.jpeg', 'Producto 19', 'Descripción del producto 19.'">
+                <img src="../img/Productos/espejo.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Espejo</h2>
+                    <p>Espejo circular, diametro 30 cm.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="adornos" class="product" onclick="openModal('adornos.jpeg', 'Producto 20', 'Descripción del producto 20.'">
+                <img src="../img/Productos/adornos.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Adornos</h2>
+                    <p> Adornos de mesa en forma de bolsa, hechos de vidrio.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="sudadera_2" class="product" onclick="openModal('hoodieblnc.jpg', 'Producto 21', 'Descripción del producto 21.'">
+                <img src="../img/Productos/hoodieblnc.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Sudadera</h2>
+                    <p> Sudadera blanca con tipografía, 100% algodón.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="pinzas" class="product" onclick="openModal('pinzas.jpeg', 'Producto 22', 'Descripción del producto 22.'">
+                <img src="../img/Productos/pinzas.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Pinzas</h2>
+                    <p>Pack de dos pinzas para el cabello.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="ganchitos" class="product" onclick="openModal('ganchitos.jpeg', 'Producto 23', 'Descripción del producto 23.'">
+                <img src="../img/Productos/ganchitos.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Ganchitos</h2>
+                    <p>Pack de ganchitos para el cabello, colores variados.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="pulseras" class="product" onclick="openModal('pulseras.jpeg', 'Producto 24', 'Descripción del producto 24.'">
+                <img src="../img/Productos/pulseras.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Pulseras</h2>
+                    <p>Pulseras de oro, pack de 6.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="silla" class="product" onclick="openModal('silla.jpg', 'Producto 25', 'Descripción del producto 25.'">
+                <img src="../img/Productos/silla.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Silla</h2>
+                    <p>Silla blanca de dormitorio estilo tejida, mediana.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="top" class="product" onclick="openModal('top.jpeg', 'Producto 26', 'Descripción del producto 26.'">
+                <img src="../img/Productos/top.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Top</h2>
+                    <p> Top de cierre con relleno.</p>
+                    <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+            <div ondragend="soltado(this)" id="blazer" class="product" onclick="openModal('blazer.jpeg', 'Producto 27', 'Descripción del producto 27.'">
+                <img src="../img/Productos/blazer.jpeg" alt="Producto 17">
+                <div class="product-details">
+                    <h2>Blazer</h2>
+                    <p>Americana de poliéster y algodón, color beige.</p>
+                                        <p>
+                        <button>Arrastra la imagen para agregar al Carrito</button>
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Producto Detalle">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <p>&copy; 2023 ReLoved</p>
+    </footer>
+
+
+</body>
+</html>

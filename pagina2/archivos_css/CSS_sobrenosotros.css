@@ -1,0 +1,219 @@
+body {
+    font-family: 'Lora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf3f8; /* Azul súper pastel */
+    color: #004d73; /* Azul oscuro para el texto */
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+.header_logo img {
+    height: 110px;
+    margin-left: auto;
+    margin-right: -20px;
+    position: relative; 
+    top: 6px;
+    cursor: pointer;
+}
+.logo_link {
+    display: inline-block; /* Asegura que sea clickeable */
+}
+
+/* Menu */
+/* Contenedor principal del menú */
+#menu_desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Lista del menú */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Imagen del menú */
+.nav img.img_menu {
+    height: 40px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+/* Elementos del menú desplegable */
+.item_menu {
+    display: none; /* Oculta las opciones inicialmente */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Cambia de absolute a relative si hay problemas de posición */
+    top: 80px;
+    z-index: 10; /* Asegura que las opciones estén sobre otros elementos */
+    width: auto; /* Ajusta el ancho automáticamente al contenido */
+    margin-bottom: 3px; /* Espacio entre las opciones del menú */
+}
+
+/* Mostrar las opciones al interactuar */
+#menu_desplegable:hover .item_menu {
+    display: block; /* Muestra todas las opciones */
+}
+
+/* Estilo de los enlaces */
+.item_menu a {
+    display: block;
+    text-decoration: none;
+    color: rgb(42, 74, 115);
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.item_menu a:hover {
+    background-color: #f0f0f0; /* Cambia el fondo al pasar el ratón */
+}
+
+.main-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #2398b9; /* Tono azulado */
+    margin: 0.5rem auto 0; /* Centrado debajo del título */
+    border-radius: 2px; /* Esquinas redondeadas */
+}
+
+.main-title {
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Asegura que el contenedor tenga el ancho completo */
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif; /* Fuente bonita */
+    font-weight: 600; /* Negrita */
+    font-size: 1.4rem; /* Tamaño de fuente */
+    color: #333; /* Color oscuro para buen contraste */
+    line-height: 1.4; /* Interlineado */
+}
+
+.image_salud {
+    max-width: 15%;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+}
+
+/* Centrar toda la sección en la página */
+.developers_section {
+    display: flex;
+    flex-direction: column; /* Para que el título esté encima */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    min-height: auto; 
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem; /* Espaciado entre el título y las tarjetas */
+}
+
+/* Contenedor de las tarjetas */
+.developers_section .developer_cards_container {
+    display: flex; /* Las coloca en fila */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 2rem; /* Espaciado entre las tarjetas */
+    flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-bottom: 2rem; /* Agrega un espacio inferior */
+    padding-bottom: 2rem; /* Ajusta también el relleno inferior */
+}
+
+/* Estilo para las tarjetas de los desarrolladores */
+.developer_card {
+    display: flex;
+    flex-direction: column; /* Imagen encima del texto */
+    align-items: center;
+    max-width: 200px; /* Ancho máximo de cada tarjeta */
+}
+
+/* Estilo para las imágenes */
+.developer_image {
+    width: 100%; /* Asegura que use todo el ancho disponible */
+    max-width: 200px; /* Tamaño reducido */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 1rem; /* Espaciado debajo de la imagen */
+}
+
+/* Estilo para los textos */
+.developer_card p {
+    margin: 0.5rem 0;
+}
+
+
+/* Clase decorativa para los párrafos */
+.fancy-paragraph {
+    font-size: 18px; /* Tamaño de letra más grande */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #2B4F60; /* Color del texto */
+    background-color: #DFF6FF; /* Fondo sutil */
+    padding: 15px; /* Espaciado interno */
+    border-left: 5px solid #b5d1e4; /* Línea decorativa en el lado izquierdo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin: 20px auto; /* Espaciado alrededor */
+    width: 80%; /* Ancho limitado */
+    text-align: justify; /* Alineación justificada */
+}
+
+/* Botón para subir */
+#scrollToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none; /* Oculto inicialmente */
+    background-color: #407d9b; /* Color base */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: bold; /* Hacer la flecha más gruesa */
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#scrollToTop.show {
+    display: flex; /* Mostrar como un botón flexible */
+    opacity: 1; /* Totalmente visible */
+}
+
+#scrollToTop:hover {
+    background-color: #104c64; /* Color al pasar el ratón */
+    transform: scale(1.1); /* Animación de hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004d73; /* Azul oscuro */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}

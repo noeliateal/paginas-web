@@ -1,0 +1,186 @@
+body {
+    font-family: 'Lora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf3f8; /* Azul súper pastel */
+    color: #004d73; /* Azul oscuro para el texto */
+}
+
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+.header_logo img {
+    height: 110px;
+    margin-left: auto;
+    margin-right: -20px;
+    position: relative; 
+    top: 6px;
+    cursor: pointer;
+}
+.logo_link {
+    display: inline-block; /* Asegura que sea clickeable */
+}
+
+/* Menu */
+/* Contenedor principal del menú */
+#menu_desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Lista del menú */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Imagen del menú */
+.nav img.img_menu {
+    height: 40px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+/* Elementos del menú desplegable */
+.item_menu {
+    display: none; /* Oculta las opciones inicialmente */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Cambia de absolute a relative si hay problemas de posición */
+    top: 80px;
+    z-index: 10; /* Asegura que las opciones estén sobre otros elementos */
+    width: auto; /* Ajusta el ancho automáticamente al contenido */
+    margin-bottom: 3px; /* Espacio entre las opciones del menú */
+}
+
+/* Mostrar las opciones al interactuar */
+#menu_desplegable:hover .item_menu {
+    display: block; /* Muestra todas las opciones */
+}
+
+/* Estilo de los enlaces */
+.item_menu a {
+    display: block;
+    text-decoration: none;
+    color: rgb(42, 74, 115);
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.item_menu a:hover {
+    background-color: #f0f0f0; /* Cambia el fondo al pasar el ratón */
+}
+
+
+/* Formulario */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .question {
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #acd2ec;
+    border-radius: 5px;
+    background-color: #eaf4fa; /* Fondo azul claro */
+    color: #004d73; /* Texto azul oscuro */
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007bb5; /* Azul fuerte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #005f8c; /* Azul más oscuro */
+}
+
+/* Botón para subir */
+#scrollToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none; /* Oculto inicialmente */
+    background-color: #407d9b; /* Color base */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: bold; /* Hacer la flecha más gruesa */
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#scrollToTop.show {
+    display: flex; /* Mostrar como un botón flexible */
+    opacity: 1; /* Totalmente visible */
+}
+
+#scrollToTop:hover {
+    background-color: #104c64; /* Color al pasar el ratón */
+    transform: scale(1.1); /* Animación de hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004d73; /* Azul oscuro */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}

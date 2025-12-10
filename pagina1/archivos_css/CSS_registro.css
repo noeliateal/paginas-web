@@ -1,0 +1,65 @@
+   /* Estilo para el título */
+   h2 {
+    color: #dbd0c6; /* Cambiar el color del título */
+    font-size: 4em; /* Cambiar el tamaño de la letra del título */
+    margin-bottom: 20px; /* Añadir espacio inferior al título */
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 600px;
+}
+
+ /* Estilo para los conjuntos de campos */
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Estilo para el título de los conjuntos de campos */
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para los botones de enviar y borrar */
+input[type="submit"],
+button {
+    background-color: #a4d1a6;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ /* Estilo específico para el botón de borrar */
+ button {
+    background-color: #e1948e;
+    margin-left: 10px;
+}
+
+#btnSeguirComprando {
+    display: none; /* Lo ocultamos inicialmente */
+    margin-top: 20px; 
+    margin-left: 10px; 
+    background-color: #F1E8DF;
+    color: #000; 
+    padding: 10px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Alinea el botón a la izquierda */
+#btnSeguirComprando.left {
+    float: left;
+}

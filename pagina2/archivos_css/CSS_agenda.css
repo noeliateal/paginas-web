@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf3f8; /* Azul súper pastel */
+    color: #004d73; /* Azul oscuro para el texto */
+}
+
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+.header_logo img {
+    height: 110px;
+    margin-left: auto;
+    margin-right: -20px;
+    position: relative; 
+    top: 6px;
+    cursor: pointer;
+}
+.logo_link {
+    display: inline-block; /* Asegura que sea clickeable */
+}
+
+/* Menu */
+/* Contenedor principal del menú */
+#menu_desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Lista del menú */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Imagen del menú */
+.nav img.img_menu {
+    height: 40px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+/* Elementos del menú desplegable */
+.item_menu {
+    display: none; /* Oculta las opciones inicialmente */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Cambia de absolute a relative si hay problemas de posición */
+    top: 80px;
+    z-index: 10; /* Asegura que las opciones estén sobre otros elementos */
+    width: auto; /* Ajusta el ancho automáticamente al contenido */
+    margin-bottom: 3px; /* Espacio entre las opciones del menú */
+}
+
+/* Mostrar las opciones al interactuar */
+#menu_desplegable:hover .item_menu {
+    display: block; /* Muestra todas las opciones */
+}
+
+/* Estilo de los enlaces */
+.item_menu a {
+    display: block;
+    text-decoration: none;
+    color: rgb(42, 74, 115);
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.item_menu a:hover {
+    background-color: #f0f0f0; /* Cambia el fondo al pasar el ratón */
+}
+/* CALENDARIO */
+main {
+    display: flex;
+    flex-direction: row-reverse; /* Invertimos el orden para que el calendario quede a la derecha */
+    justify-content: space-between; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinear elementos al inicio */
+    margin: 20px;
+}
+
+/* Estilos para el cartel de bienvenida */
+.mensaje-bienvenida {
+    background-color: #d4ecf7; /* Azul claro brillante */
+    color: #004d73; /* Azul oscuro */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Rubik', cursive; /* Fuente de Google Fonts */
+    font-size: 2rem; /* Tamaño de fuente más grande para el título */
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Para el texto del mensaje debajo del título */
+.mensaje-bienvenida p {
+    font-family: 'Montserrat', sans-serif; /* Fuente para el texto adicional */
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Agregar una ligera animación de entrada para hacerla más atractiva */
+.mensaje-bienvenida h2 {
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.mensaje-bienvenida p {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.actividades {
+    margin: 0 5px 0 0; /* Espaciado a la derecha */
+    padding: 10px;
+    text-align: left; /* Alinear texto a la izquierda */
+    width: 250px; /* Ajustar ancho para mejor proporción */
+}
+
+.calendario-contenedor {
+    width: calc(100% - 300px); /* Ajustar ancho para que respete el espacio de actividades */
+    display: grid;
+    grid-template-columns: 150px repeat(7, 1fr); /* Mantener el diseño del calendario */
+    gap: 15px; /* Espacio entre celdas */
+}
+
+.encabezado {
+    display: contents;
+}
+
+.encabezado div, .hora {
+    background-color: #acd2ec; /* Azul fuerte */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.filas {
+    display: flex;
+    flex-direction: column;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 150px repeat(7, 1fr);
+    gap: 15px;
+}
+
+.dropzone {
+    min-height: 20px;
+    min-width: 60px;
+    background-color: #eaf4fa; /* Fondo azul claro */
+    border: 2px dashed #a6d2e8; /* Azul pastel intermedio */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+}
+
+.actividad {
+    background-color: #007bb5; /* Azul fuerte */
+    color: white;
+    padding: 7px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.actividad:active {
+    cursor: grabbing;
+    opacity: 0.7;
+}
+
+.papelera {
+    background-color: #fa4f43;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px dashed #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.papelera:hover {
+    background-color: #f53131;
+}
+
+.papelera p {
+    margin: 0;
+}
+
+/* Estilo para agregar tareas nuevas */
+.nueva-tarea {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.nueva-tarea input {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #a6d2e8; /* Azul pastel intermedio */
+    border-radius: 5px;
+}
+
+.nueva-tarea button {
+    padding: 5px 10px;
+    background-color: #007bb5; /* Azul fuerte */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nueva-tarea button:hover {
+    background-color: #005f8c; /* Azul más oscuro */
+}
+
+/* Botón para subir */
+#scrollToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none; /* Oculto inicialmente */
+    background-color: #407d9b; /* Color base */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: bold; /* Hacer la flecha más gruesa */
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#scrollToTop.show {
+    display: flex; /* Mostrar como un botón flexible */
+    opacity: 1; /* Totalmente visible */
+}
+
+#scrollToTop:hover {
+    background-color: #104c64; /* Color al pasar el ratón */
+    transform: scale(1.1); /* Animación de hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004d73; /* Azul oscuro */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}

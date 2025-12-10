@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 10;
+}
+
+.header_logo img {
+    height: 110px;
+    margin-left: auto;
+    margin-right: -20px;
+    position: relative; 
+    top: 6px;
+    cursor: pointer;
+}
+.logo_link {
+    display: inline-block; /* Asegura que sea clickeable */
+}
+
+/* Menu */
+/* Contenedor principal del menú */
+#menu_desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Lista del menú */
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Imagen del menú */
+.nav img.img_menu {
+    height: 40px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+/* Elementos del menú desplegable */
+.item_menu {
+    display: none; /* Oculta las opciones inicialmente */
+    background-color: white;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Cambia de absolute a relative si hay problemas de posición */
+    top: 80px;
+    z-index: 10; /* Asegura que las opciones estén sobre otros elementos */
+    width: auto; /* Ajusta el ancho automáticamente al contenido */
+    margin-bottom: 3px; /* Espacio entre las opciones del menú */
+}
+
+/* Mostrar las opciones al interactuar */
+#menu_desplegable:hover .item_menu {
+    display: block; /* Muestra todas las opciones */
+}
+
+/* Estilo de los enlaces */
+.item_menu a {
+    display: block;
+    text-decoration: none;
+    color: rgb(42, 74, 115);
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.item_menu a:hover {
+    background-color: #f0f0f0; /* Cambia el fondo al pasar el ratón */
+}
+
+/* Estilo para la sección de introducción */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f1fcfd; /* Fondo suave */
+    border-radius: 10px;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+.intro-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo de la sección */
+}
+
+.intro-imagen {
+    flex: 0.7; 
+    text-align: center;
+}
+
+.intro-imagen img {
+    max-width: 100%; /* La imagen se ajusta al ancho disponible */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.intro-texto {
+    flex: 1; 
+    padding: 20px;
+    color: #333;
+    text-align: justify;
+    margin: 0 10px; /* Márgenes a ambos lados */
+}
+
+.intro-texto h1 {
+    color: #52bbd6; /* Azul pastel */
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.organizacion {
+    background-color: #f1fcfd; /* Fondo suave */
+    padding: 20px;
+    border-radius: 15px; /* Bordes más redondeados */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    border: 1px solid #e0f7fa; /* Bordes ligeros */
+    text-align: justify;
+}
+
+.organizacion ul {
+    list-style-type: none; /* Elimina los viñetas predeterminadas */
+    padding-left: 0; /* Elimina el padding lateral */
+    margin: 0;
+}
+
+.organizacion ul li {
+    display: flex; /* Permite alinear íconos y texto en fila */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 15px; /* Espaciado entre los elementos */
+    padding: 15px;
+    border-left: 4px solid #efc5e3; /* Línea decorativa */
+    background: #ffffff; /* Fondo para destacar cada ítem */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.organizacion ul li strong {
+    color: #a6c1d4;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex: 0 0 30%; /* Ocupa el 30% del ancho del contenedor */
+    margin-right: 10px; /* Espaciado entre el título y el texto */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.organizacion ul li::before {
+    content: "✔️";
+    color: #68d1ec;
+    font-size: 1rem;
+    margin-right: 10px;
+    flex-shrink: 0; /* Evita que el ícono se reduzca */
+}
+
+.organizacion ul li:hover {
+    background-color: #f9f5fd; /* Color al pasar el ratón */
+    transform: scale(1.01); /* Efecto sutil de zoom */
+    transition: 0.3s ease-in-out; /* Transición suave */
+}
+
+.vision {
+    background-color: #f1fcfd; /* Fondo suave */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 30px;
+    text-align: justify; /* Justificar el texto */
+}
+
+.vision h3 {
+    font-size: 1.8rem; /* Tamaño del título */
+    color: #f2bce8; /* Azul vibrante */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.vision p {
+    font-size: 1.1rem; /* Tamaño del texto */
+    line-height: 1.8; /* Altura de línea más espaciosa */
+    color: #000000;
+    margin-top: 10px;
+}
+
+.vision::before {
+    content: "🌷"; /* Ícono decorativo */
+    font-size: 2rem;
+    color: #68d1ec;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Botón para subir */
+#scrollToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none; /* Oculto inicialmente */
+    background-color: #407d9b; /* Color base */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: bold; /* Hacer la flecha más gruesa */
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#scrollToTop.show {
+    display: flex; /* Mostrar como un botón flexible */
+    opacity: 1; /* Totalmente visible */
+}
+
+#scrollToTop:hover {
+    background-color: #104c64; /* Color al pasar el ratón */
+    transform: scale(1.1); /* Animación de hover */
+}
+
+footer {
+    text-align: center; 
+    padding: 1em;
+    background-color: #004d73; /* Azul oscuro */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;   
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Salud Mental</title>
+    <link rel="stylesheet" href="../archivos_css/CSS_test.css">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header id="mainHeader">
+        <div id="menu_desplegable" onmouseover="desplegar()" onmouseout="replegar()">
+            <ul class="nav">
+                <img class="img_menu" src="../img/Decorativas/menu.png" alt="Menú">
+                
+                <li class="item_menu"><a href="Inicio.html">Inicio</a></li>
+                <li class="item_menu"><a href="SobreNosotros.html">Sobre nosotros</a></li>
+                <li class="item_menu"><a href="ComoFuncionamos.html">¿Cómo funcionamos?</a></li>
+                <li class="item_menu"><a href="Especialistas.html">Nuestros profesionales</a></li>
+                <li class="item_menu"><a href="Agenda.html">Tu agenda</a></li>
+            </ul>
+        </div>
+        <div class="header_logo">
+            <a href="Inicio.html">
+                <img src="../img/Decorativas/logo.png" alt="Logo de la plataforma">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <form id="mental-health-test" action="#" method="post">
+            <div class="question">
+                <label for="name">1. ¿Cuál es tu nombre? Añade tu correo electrónico.</label><br>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+            </div>
+
+            <div class="question">
+                <label for="birthdate">2. ¿Cuál es tu fecha de nacimiento?</label><br>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+
+            <div class="question">
+                <label for="question1">3. ¿Con qué frecuencia te sientes ansioso o estresado?</label><br>
+                <select id="question1" name="question1" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="nunca">Nunca</option>
+                    <option value="rara_vez">Rara vez</option>
+                    <option value="a_veces">A veces</option>
+                    <option value="frecuentemente">Frecuentemente</option>
+                    <option value="siempre">Siempre</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question2">4. ¿Cómo describirías tu calidad de sueño?</label><br>
+                <select id="question2" name="question2" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="muy_buena">Muy buena</option>
+                    <option value="buena">Buena</option>
+                    <option value="regular">Regular</option>
+                    <option value="mala">Mala</option>
+                    <option value="muy_mala">Muy mala</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="open_question1">5. Describe brevemente cómo te sientes en este momento:</label><br>
+                <textarea id="open_question1" name="open_question1" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="question3">6. ¿Con qué frecuencia te sientes desmotivado o sin energía?</label><br>
+                <select id="question3" name="question3" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="nunca">Nunca</option>
+                    <option value="rara_vez">Rara vez</option>
+                    <option value="a_veces">A veces</option>
+                    <option value="frecuentemente">Frecuentemente</option>
+                    <option value="siempre">Siempre</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question4">7. ¿Sientes que tienes a alguien con quien hablar sobre tus problemas?</label><br>
+                <select id="question4" name="question4" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="siempre">Siempre</option>
+                    <option value="frecuentemente">Frecuentemente</option>
+                    <option value="a_veces">A veces</option>
+                    <option value="rara_vez">Rara vez</option>
+                    <option value="nunca">Nunca</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question5">8. ¿Te resulta difícil relajarte o desconectarte?</label><br>
+                <select id="question5" name="question5" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="nunca">Nunca</option>
+                    <option value="rara_vez">Rara vez</option>
+                    <option value="a_veces">A veces</option>
+                    <option value="frecuentemente">Frecuentemente</option>
+                    <option value="siempre">Siempre</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="open_question2">9. ¿Qué cambios consideras necesarios en tu vida para sentirte mejor?</label><br>
+                <textarea id="open_question2" name="open_question2" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="question6">10. ¿Con qué frecuencia te sientes abrumado por tus responsabilidades?</label><br>
+                <select id="question6" name="question6" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="nunca">Nunca</option>
+                    <option value="rara_vez">Rara vez</option>
+                    <option value="a_veces">A veces</option>
+                    <option value="frecuentemente">Frecuentemente</option>
+                    <option value="siempre">Siempre</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question7">11. ¿Cómo calificarías tu capacidad para manejar el estrés?</label><br>
+                <select id="question7" name="question7" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="muy_buena">Muy buena</option>
+                    <option value="buena">Buena</option>
+                    <option value="regular">Regular</option>
+                    <option value="mala">Mala</option>
+                    <option value="muy_mala">Muy mala</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="open_question3">12. ¿Qué haces para relajarte después de un día difícil?</label><br>
+                <textarea id="open_question3" name="open_question3" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="question8">13. ¿Con qué frecuencia sientes que tu vida tiene un propósito claro?</label><br>
+                <select id="question8" name="question8" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="siempre">Siempre</option>
+                    <option value="frecuentemente">Frecuentemente</option>
+                    <option value="a_veces">A veces</option>
+                    <option value="rara_vez">Rara vez</option>
+                    <option value="nunca">Nunca</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question9">14. ¿Cuánto apoyo emocional sientes que recibes de las personas cercanas?</label><br>
+                <select id="question9" name="question9" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="mucho">Mucho</option>
+                    <option value="bastante">Bastante</option>
+                    <option value="algo">Algo</option>
+                    <option value="poco">Poco</option>
+                    <option value="nada">Nada</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="open_question4">15. ¿Qué te gustaría cambiar en tu rutina diaria para sentirte más equilibrado?</label><br>
+                <textarea id="open_question4" name="open_question4" rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+            </div>
+
+            <button type="submit">Enviar Respuestas</button>
+        </form>
+    </main>
+
+    <!-- Botón para volver al inicio -->
+    <button id="scrollToTop" title="Ir arriba">↥</button>
+
+    <!-- Vincular el JavaScript -->
+    <script src="../archivos_js/java_1.js"></script>
+    <script src="../archivos_js/java_4.js"></script>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 MenThy | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

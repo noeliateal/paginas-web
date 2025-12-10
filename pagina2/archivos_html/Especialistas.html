@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialistas en Psicología</title>
+
+    <link rel="stylesheet" type="text/css" href="../archivos_css/CSS_especialistas.css">
+
+    <!-- Tipografía desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!--Documento 2 de JavaScript-->
+    <script type="text/javascript" src="../archivos_js/java_2.js"></script>
+
+</head>
+
+<body>
+     <!-- Cabecera -->
+    <header id="mainHeader">
+        <div id="menu_desplegable" onmouseover="desplegar()" onmouseout="replegar()">
+            <ul class="nav">
+                <img class="img_menu" src="../img/Decorativas/menu.png" alt="Menú">
+                
+                <li class="item_menu"><a href="Inicio.html">Inicio</a></li>
+                <li class="item_menu"><a href="SobreNosotros.html">Sobre nosotros</a></li>
+                <li class="item_menu"><a href="ComoFuncionamos.html">¿Cómo funcionamos?</a></li>
+                <li class="item_menu"><a href="Agenda.html">Tu agenda</a></li>
+                <li class="item_menu"><a href="Test.html">Test salud mental</a></li>
+            </ul>
+        </div>
+        <div class="header_logo">
+            <a href="Inicio.html">
+                <img src="../img/Decorativas/logo.png" alt="Logo de la plataforma">
+            </a>
+        </div>
+    </header>
+
+    <div id="lugar">
+        <section class="psico-container">
+
+            <!--ESPECIALISTAS-->
+            <div id="Gabriel" class="psico" onclick="openModal('psico1.jpg', 'Gabriel Ortiz', 'Experto en psicología clínica con más de 10 años de experiencia. Se enfoca en el tratamiento de trastornos emocionales como ansiedad, depresión, y estrés. Su método se basa en la terapia cognitivo - conductual, trabajando con el paciente en un ambiente seguro y confidencial para mejorar su bienestar mental.')">
+                <img src="../img/Psicólogos/psico1.jpg" alt="Gabriel Ortiz">
+                <div class="psico-details">
+                    <h2>Lic. Gabriel Ortiz</h2>
+                    <p>Especialista en psicología clínica</p>
+                </div>
+            </div>
+
+            <div id="Alma" class="psico" onclick="openModal('psico2.jpg', 'Alma Reyes', 'Especialista en terapias de pareja, ayudando a resolver conflictos y mejorar la comunicación en relaciones amorosas. Su enfoque integrador incluye técnicas de terapia emocional y conductual para fortalecer la relación y la conexión emocional entre los miembros de la pareja.')">
+                <img src="../img/Psicólogos/psico2.jpg" alt="Alma Reyes">
+                <div class="psico-details">
+                    <h2>Psic. Alma Reyes</h2>
+                    <p>Especialista en terapias de pareja</p>
+                </div>
+            </div>
+
+            <div id="Emilio" class="psico" onclick="openModal('psico3.jpg', 'Emilio Sánchez', 'Psicólogo especializado en tratar adicciones de todo tipo. Con un enfoque multidisciplinario, utiliza terapia cognitivo - conductual y técnicas de motivación para ayudar a los pacientes a superar la dependencia y mejorar su calidad de vida.')">
+                <img src="../img/Psicólogos/psico3.jpg" alt="Emilio Sánchez">
+                <div class="psico-details">
+                    <h2>Dr. Emilio Sánchez</h2>
+                    <p>Especialista en adicciones</p>
+                </div>
+            </div>
+
+            <div id="Isabelle" class="psico" onclick="openModal('psico4.jpg', 'Isabelle Durand', 'Especializada en trabajar con niños y adolescentes. Su enfoque en la psicología infantil se centra en el desarrollo emocional y cognitivo, utilizando métodos lúdicos y terapia de juego para ayudar a los niños a expresarse y superar sus dificultades.')">
+                <img src="../img/Psicólogos/psico4.jpg" alt="Isabelle Durand">
+                <div class="psico-details">
+                    <h2>Dra. Isabelle Durand</h2>
+                    <p>Especialista en psicología infantil</p>
+                </div>
+            </div>
+
+            <div id="Alejandro" class="psico" onclick="openModal('psico5.jpg', 'Alejandro Campos', 'Trabaja con deportistas de alto rendimiento, ayudándoles a manejar el estrés, la ansiedad y mejorar su rendimiento psicológico. Utiliza técnicas de visualización, relajación y control emocional para potenciar su éxito tanto dentro como fuera del campo.')">
+                <img src="../img/Psicólogos/psico5.jpg" alt="Alejandro Campos">
+                <div class="psico-details">
+                    <h2>Psic. Alejandro Campos</h2>
+                    <p>Especialista en psicología deportiva</p>
+                </div>
+            </div>
+
+            <div id="Sofía" class="psico" onclick="openModal('psico6.jpg', 'Sofía Vidal', 'Trata con estudiantes y profesionales de la educación, ayudándoles a mejorar su rendimiento académico y bienestar emocional. Con un enfoque en la psicología positiva y técnicas de manejo del estrés, fomenta la autoestima y la confianza en los jóvenes.')">
+                <img src="../img/Psicólogos/psico6.jpg" alt="Sofía Vidal">
+                <div class="psico-details">
+                    <h2>Psic. Sofía Vidal</h2>
+                    <p>Especialista en psicología educativa</p>
+                </div>
+            </div>
+
+            <div id="Paloma" class="psico" onclick="openModal('psico7.jpg', 'Paloma Lozano', 'Especialista en psicología forense, evaluando a individuos en contextos legales. Su trabajo incluye la evaluación de testigos, víctimas y delincuentes para ayudar a los tribunales a tomar decisiones informadas sobre las capacidades psicológicas de los implicados en procesos judiciales.')">
+                <img src="../img/Psicólogos/psico7.jpg" alt="Paloma Lozano">
+                <div class="psico-details">
+                    <h2>Dra. Paloma Lozano</h2>
+                    <p>Especialista en psicología forense</p>
+                </div>
+            </div>
+
+            <div id="Clara" class="psico" onclick="openModal('psico8.jpg', 'Clara Gómez', 'Experta en terapia cognitivo - conductual, un enfoque muy eficaz para tratar trastornos de ansiedad, depresión y fobias. Trabaja en conjunto con los pacientes para cambiar patrones de pensamiento negativos y desarrollar nuevas estrategias de afrontamiento.')">
+                <img src="../img/Psicólogos/psico8.jpg" alt="Clara Gómez">
+                <div class="psico-details">
+                    <h2>Lic. Clara Gómez</h2>
+                    <p>Especialista en terapia cognitivo - conductual</p>
+                </div>
+            </div>
+
+            <div id="Marina" class="psico" onclick="openModal('psico9.jpg', 'Marina Castillo', 'Se enfoca en el bienestar psicológico dentro del entorno laboral, ayudando a los empleados a lidiar con el estrés, la ansiedad y el burnout. Su enfoque preventivo incluye programas de capacitación en habilidades emocionales y técnicas para mejorar el ambiente de trabajo.')">
+                <img src="../img/Psicólogos/psico9.jpg" alt="Marina Castillo">
+                <div class="psico-details">
+                    <h2>Psic. Marina Castillo</h2>
+                    <p>Especialista en psicología laboral</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="myModal" class="modal" onclick="closeModalOutside(event)">
+        <div class="modal-content" onclick="event.stopPropagation()"> <!-- Previene que el clic en el contenido cierre el modal -->
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Especialista Detalle">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+
+            <h4>¡No dudes en contactar con nosotros!</h4>
+
+            <p>Si deseas agendar una cita con alguno de nuestros especialistas, por favor, escríbenos al correo: <strong><a href="mailto:citasmenthy@gmail.com">citasmenthy@gmail.com</a></strong></p>
+
+            <!-- Botón para abrir la agenda -->
+            <button onclick="window.location.href='Agenda.html';">Organiza tu agenda</button>
+        </div>
+    </div>
+    
+    <!-- Botón para volver al inicio -->
+    <button id="scrollToTop" title="Ir arriba">↥</button>
+
+    <!-- Vincular el JavaScript -->
+    <script src="../archivos_js/java_1.js"></script>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 MenThy | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
+

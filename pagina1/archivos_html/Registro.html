@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+
+    <link rel="stylesheet" type="text/css" href="../archivos_css/CSS_registro.css">
+
+    <!--Documneto 3 de JavaScript-->
+    <script type="text/javascript" src="../archivos_js/java_3.js"></script>
+
+
+</head>
+    <body>
+        <!-- Título del formulario -->
+        <h2>Registro</h2>
+
+        <!-- Formulario de registro -->
+        <form id="form" onsubmit="datos()" action="mailto:noeliateal@gmail.com" method="post" enctype="text/plain">
+            <!-- Campos para los datos personales -->
+            <fieldset>
+                <legend><b><i>Datos personales</i></b></legend><br>
+                <label for="nom">Nombre:</label>
+                <input type="text" id="nom" placeholder="Escriba su nombre" size="60" autofocus required><br><br>
+
+                <label for="cognom">Apellidos:</label>
+                <input type="text" id="cognom" placeholder="Escriba sus apellidos" size="60" required><br><br>
+                
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="date" id="fecha" name="fecha" required><br><br>
+
+                
+                <label for="sexo">Sexo:</label><br>
+                <!-- Opciones de género -->
+                <input type="radio" name="sexo" value="Femenino">Femenino<br>
+                <input type="radio" name="sexo" value="Masculino">Masculino<br>
+                <input type="radio" name="sexo" value="Prefiero no decirlo">Prefiero no decirlo<br><br>
+
+                <label for="dom">Domicilio:</label>
+                <input type="text" id="dom" placeholder="Calle, Avenida..." size="60" required>
+
+                <p><label for="w3review">Completar dirección:</label></p>
+                <textarea id="w3review" placeholder="Piso, puerta, código postal..." name="w3review" rows="3" cols="30"></textarea><br><br>
+
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" size="60" required><br><br>
+
+            </fieldset>
+            <br>
+
+            <!-- Campos para el alta como cliente -->
+            <fieldset>
+                <legend><b><i>Alta como cliente</i></b></legend><br>
+                <label for="correo">Correo electrónico:</label>
+                <input type="text" id="correo" placeholder="Escriba su email" size="60" required><br><br>
+
+                <label for="pwd">Contraseña:</label>
+                <input type="password" id="pwd" name="pwd" required>
+
+            </fieldset>
+            <br>
+
+            <!-- Campos para información adicional -->
+            <fieldset>
+                <legend><b><i>Sobre nosotras</i></b></legend>
+
+                <ul>
+                    <li>¿Cómo nos has conocido?</li><br>
+                    <form action="/action_page.php">
+                        <!-- Opciones de cómo se conoció la empresa -->
+                        <input type="checkbox" id="mejora1" name="mejora1" value="Imagen corporativa">
+                        <label for="mejora1"> Redes sociales</label><br>
+                        <input type="checkbox" id="mejora2" name="mejora2" value="Servicio en tienda">
+                        <label for="mejora2"> Boca a boca</label><br>
+                        <input type="checkbox" id="mejora3" name="mejora3" value="Atención al cliente">
+                        <label for="mejora3"> He visitado la tienda física</label><br>
+                        <input type="checkbox" id="mejora4" name="mejora4" value="Todo">
+                        <label for="mejora4"> No os conocía</label><br><br>
+                    </form>
+                    <li>Valora nuestra iniciativa:
+                        <input type="number" min="0" max="10">
+                    </li>
+                </ul> 
+
+                <p><label for="w3review">¡Cualquier sugerencia es bienvenida!</label></p>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+            </fieldset>
+            <br>
+            
+            <!-- Botones de enviar y borrar -->
+            <div>
+                <input type="submit" form="form" value="Enviar" onclick="recoger_datos()" > 
+                <button type="reset" form="form" value="Borrar">Borrar todo</button>
+            </div>
+            
+            <button id="btnSeguirComprando" onclick="seguirComprando()">¡Excelente! Seguir comprando</button>
+
+        </form>
+    </body>
+</html> 

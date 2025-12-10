@@ -1,0 +1,158 @@
+body {
+    background-color: #FFFAF4;
+}
+
+/* Estilos del logotipo en el encabezado */
+.logo {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Línea debajo del logotipo */
+.linea_abajo {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    border-bottom: 3px solid #d4d1c9;
+}
+
+/* Imagen del menú */
+.img_menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 40px;
+}
+
+header {
+    margin-bottom: 100px;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Diseño flexible para la sección principal */
+.main_sn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos para la imagen a la izquierda en la sección principal */
+.imag_izq {
+    margin-left: 40%;
+    height: auto;
+    width: 50%;
+    margin-bottom: 10%;
+}
+
+/* Estilos para el texto largo a la derecha en la sección principal */
+.text_der {
+    flex: 1;
+    margin-right: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    margin-bottom: 15%;
+}
+
+div.text_der h3 {
+    color: rgb(88, 74, 54);
+}
+
+div.text_der p {
+    color: rgb(131, 115, 92);
+}
+
+/* Estilos para la imagen a la derecha en la sección principal */
+.imag_der {
+    float: right;
+    margin-right: 40%;
+    height: auto;
+    width: 50%;
+    margin-bottom: 10%;
+}
+
+/* Estilos para el texto a la izquierda en la sección principal */
+.text_izq {
+    flex: 1;
+    margin-left: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    text-align: right;
+    margin-bottom: 15%;
+}
+
+div.text_izq h3 {
+    color: rgb(88, 74, 54);
+}
+
+div.text_izq p {
+    color: rgb(131, 115, 92);
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ESTILOS PARA EL MENÚ DESPLEGABLE */
+
+/* Menú inicialmente: */
+#menu_desplegable {
+    display: inline-block;
+}
+
+/* Menú al poner el ratón: */
+#menu_desplegable:hover {
+    cursor: pointer;
+    background-color: #c1ac87;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+
+/* Quita el estilo de lista por defecto */
+.nav {
+    list-style: none;
+}
+
+/* Los items de la lista */
+.nav > li {
+    float: left;
+    font-family: Arial, sans-serif;
+}
+
+/* Despliegue */
+.nav li a {
+    background-color: #c1ac87;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+
+/* Cuando el ratón se pone encima: */
+.nav li a:hover {
+    background-color: #434343;
+}
+
+/* De normal están sin ser vistas */
+.item_menu {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi agenda</title>
+    <link rel="stylesheet" href="../archivos_css/CSS_agenda.css">
+    
+    <!-- Tipografía desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header id="mainHeader">
+        <div id="menu_desplegable" onmouseover="desplegar()" onmouseout="replegar()">
+            <ul class="nav">
+                <img class="img_menu" src="../img/Decorativas/menu.png" alt="Menú">
+                
+                <li class="item_menu"><a href="Inicio.html">Inicio</a></li>
+                <li class="item_menu"><a href="SobreNosotros.html">Sobre nosotros</a></li>
+                <li class="item_menu"><a href="ComoFuncionamos.html">¿Cómo funcionamos?</a></li>
+                <li class="item_menu"><a href="Especialistas.html">Nuestros profesionales</a></li>
+                <li class="item_menu"><a href="Test.html">Test salud mental</a></li>
+            </ul>
+        </div>
+        <div class="header_logo">
+            <a href="Inicio.html">
+                <img src="../img/Decorativas/logo.png" alt="Logo de la plataforma">
+            </a>
+        </div>
+    </header>
+
+    <!-- Cartel con mensaje debajo de la cabecera -->
+    <div class="mensaje-bienvenida">
+        <h2>BIENVENIDO A TU AGENDA SEMANAL 😊</h2>
+        <p>Tener tu vida organizada equivale a tener organizada tu mente, llénate de planes que te hagan feliz pero recuerda no sobrecargarte.</p>
+
+        <p><b>Arrastra las actividades que más te gusten o añade las tuyas propias. ¡Diseña tu semana vista como te apetezca!</b></p>
+    </div>
+
+    <main class="calendario">
+        <!-- Sección de tareas y papelera -->
+        <aside class="actividades">
+            <h2>Actividades</h2>
+            <div class="actividad" id="actividad1" draggable="true">Meditación</div>
+            <div class="actividad" id="actividad2" draggable="true">Cita psicólogo</div>
+            <div class="actividad" id="actividad3" draggable="true">Ejercicio físico</div>
+            <div class="actividad" id="actividad4" draggable="true">Lectura</div>
+            <div class="actividad" id="actividad5" draggable="true">Repostería</div>
+            <div class="actividad" id="actividad6" draggable="true">Tiempo de calidad</div>
+            <div class="actividad" id="actividad7" draggable="true">Escribir</div>
+            <div class="actividad" id="actividad8" draggable="true">Escuchar música</div>
+            <div class="actividad" id="actividad9" draggable="true">Practicar yoga</div>
+            <div class="actividad" id="actividad10" draggable="true">Baño relajante</div>
+            <div class="actividad" id="actividad11" draggable="true">Terapia grupal</div>
+
+            <!-- Nueva tarea -->
+            <div class="nueva-tarea">
+                <input type="text" id="input-tarea" placeholder="Escribe otra actividad" />
+                <button id="btn-agregar-tarea">Añadir</button>
+            </div>
+
+            <!-- Papelera -->
+            <div class="papelera" id="papelera" ondrop="eliminarActividad(event)" ondragover="permitirDrop(event)">
+                <p>Arrastra aquí para eliminar</p>
+            </div>
+        </aside>
+
+        <!-- Sección del calendario -->
+        <div class="calendario-contenedor">
+            <div class="encabezado">
+                <div class="hora"></div>
+                <div>Lunes</div>
+                <div>Martes</div>
+                <div>Miércoles</div>
+                <div>Jueves</div>
+                <div>Viernes</div>
+                <div>Sábado</div>
+                <div>Domingo</div>
+            </div>
+            <div class="filas">
+                <!-- Horas y dropzones -->
+                <div class="fila">
+                    <div class="hora">09:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">10:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">11:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">12:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">13:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">14:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">15:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">16:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">17:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">18:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">19:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+                <div class="fila">
+                    <div class="hora">20:00</div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                    <div class="dropzone"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón para volver al inicio -->
+    <button id="scrollToTop" title="Ir arriba">↥</button>
+
+    <!-- Vincular el JavaScript -->
+    <script src="../archivos_js/java_1.js"></script>
+    <script src="../archivos_js/java_3.js"></script>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 MenThy | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
